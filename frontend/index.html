@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* common box style */
+.signIn,
+.signUp{
+  width: 320px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* hide signup by default */
+.signUp{
+  display: none;
+}
+
+h3{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input{
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus{
+  border-color: #667eea;
+}
+
+/* buttons */
+button{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+form button{
+  background: #667eea;
+  color: #fff;
+  margin-top: 5px;
+}
+
+form button:hover{
+  background: #5a6fd6;
+}
+
+.signUp-page{
+  width: 100%;
+  margin-top: 10px;
+  background: transparent;
+  color: #667eea;
+  border: 1px solid #667eea;
+}
+
+.signUp-page:hover{
+  background: #667eea;
+  color: #fff;
+}
+
+.signIn-back,
+.signUp-back{
+  width: 100%;
+  margin-top: 10px;
+  background: #eee;
+  color: #333;
+}
+
+.signIn-back:hover,
+.signUp-back:hover{
+  background: #ddd;
+}
+
+
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= USER DASHBOARD ================= */
+
+.userDashboard {
+  width: 360px;
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: none; /* JS la toggle pannalam */
+}
+
+/* welcome text */
+.userDashboard-h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* back button */
+.userbacded {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.userbacded:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+}
+
+
+/* ================= ADMIN DASHBOARD ================= */
+
+.admin-dashboard {
+  display: none ;
+  width: 70%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.admin-dashboard h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+/* users count */
+.users-count {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 18px;
+}
+
+/* user list */
+.user-detail {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.user-detail li {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #3b82f6;
+}
+
+/* user text */
+.user-detail h3 {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #334155;
+  font-weight: 600;
+}
+
+.usernamead {
+  font-size: 16px;
+  color: #1d4ed8;
+}
+
+.email {
+  color: #475569;
+}
+
+.Password {
+  color: #dc2626;
+  letter-spacing: 1px;
+}
+
+/* back button */
+.adminbacked {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1d4ed8;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.adminbacked:hover {
+  background: #1e40af;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- sign In -->
+    
+    <div class="signIn">
+
+        <h3>login</h3>
+
+    <form class="sign-in-form">
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        class="sign-in-form-email"
+        placeholder="Enter the email"
+        required
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        class="sign-in-form-password"
+        placeholder="Enter the password"
+        required
+      />
+      <button type="submit">submit</button>
+    </form>
+    <button class="signUp-page">new user register</button>
+    <!-- <button class="signIn-back">Back</button> -->
+    </div>
+
+    <!-- sign UP -->
+ <div class="signUp">
+    <h3>new user register</h3>
+    <form class="sign-up-form">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="sign-up-form-name"
+        name="name"
+        placeholder="Enter The your name"
+        required
+      />
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="sign-up-form-email"
+        name="email"
+        placeholder="Enter The your Email"
+        required
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        class="sign-up-form-password"
+        placeholder="Enter the password"
+        required
+      />
+      <button type="submit">submit</button>
+    </form>
+    <button class="signUp-back">login</button>
+    </div>
+
+    <!-- admin-dashboard -->
+    <div class="admin-dashboard">
+      <h1>Admin Dashboard</h1>
+      <div class="users-count"></div>
+
+      <ol class="user-detail">
+        <li>
+          <h3 class="usernamead">usernamead</h3>
+          <h3 class="email">Email</h3>
+          <h3 class="Password">Password</h3>
+        </li>
+      </ol>
+      <button class="adminbacked">BACK</button>
+    </div>
+
+    <!-- userDashboard -->
+    <div class="userDashboard">
+      <h1 class="userDashboard-h1"></h1>
+      <button class="userbacded">BACK</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
